@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-…(integrity hash)…" crossorigin="anonymous" referrerpolicy="no-referrer"   />
+    <link rel="stylesheet" href="./bootstrap.css">
+    <title>Contact us</title>
+    <style>
+        .Header {
+            position: sticky;
+            top: 0px;
+            z-index: 999999;
+            background-color: white;
+        }
+
+        .topbar {
+            align-content: center;
+            justify-items: center;
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+
+        .social-icon {
+            border: 0px solid;
+            background-color: gray;
+            border-radius: 50%;
+            text-align: center;
+            align-content: center;
+            color: white;
+            height: 35px;
+            width: 35px;
+            margin-top: 10px;
+        }
+
+        .social-icon:hover {
+            background-color: orangered;
+        }
+
+        #navbarNav {
+            margin-right: 20px;
+            margin-left: 15px;
+        }
+
+        .navbar-brand {
+            margin-left: 40px;
+        }
+
+        .nav-item {
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+
+        .schedule {
+            background-color: black;
+            color: orangered;
+            width: 180px;
+            height: 40px;
+            border-bottom-left-radius: 100px;
+            border-bottom-right-radius: 100px;
+            border-top-right-radius: 100px;
+            border-top-left-radius: 100px;
+            padding-bottom: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            align-content: center;
+            text-align: center;
+            margin-right: 10px;
+        }
+
+        #calender {
+            border: 1px solid orangered;
+            border-radius: 50%;
+            height: 40px;
+            width: 40px;
+            align-content: center;
+            text-align: center;
+            background-color: orangered;
+            margin-left: 0px;
+            position: relative;
+            top: -2px;
+            left: -16px;
+        }
+
+        .nav-link:hover {
+            color: orangered;
+        }
+
+        /* moblie */
+        @media(max-width:426px) {
+            .home-text {
+                margin-left: 150px;
+            }
+
+            .contact-container {
+                border: 0px solid white;
+                background-color: white;
+                width: 350px;
+                height: 600px;
+                border-radius: 20px;
+                text-align: start;
+                padding-top: 20px;
+                padding-left: 20px;
+                box-shadow: 3px 3px 20px 5px rgba(0, 0, 0, 0.12);
+                margin-left: 20px;
+                margin-top: 80px;
+
+            }
+
+            .contact-details {
+                width: 350px;
+                margin-left: 30px;
+
+            }
+
+            .phone {
+                justify-content: center;
+                gap: 25px;
+                padding-top: 30px;
+                margin-top: 60px;
+                box-shadow: 3px 3px 20px 5px rgba(0, 0, 0, 0.12);
+            }
+
+            .contact-section {
+                justify-content: center;
+                margin-bottom: 50px;
+            }
+
+            .textarea {
+                width: 280px;
+                border-radius: 25px;
+                background-color: whitesmoke;
+                border: 0px;
+                height: 40px;
+                padding-left: 15px;
+                margin-top: 10px;
+            }
+
+            #map-img {
+                width: 400px;
+                height: 200px;
+            }
+
+            .map-section {
+                text-align: center;
+                margin-bottom: 50px;
+            }
+        }
+
+        /* tablet */
+        @media (min-width:427px) and (max-width:768px) {
+            .home-text {
+                margin-left: 300px;
+            }
+
+            .contact-container {
+                border: 0px solid white;
+                background-color: white;
+                width: 450px;
+                height: 650px;
+                border-radius: 20px;
+                text-align: start;
+                padding-top: 20px;
+                padding-left: 20px;
+                box-shadow: 3px 3px 20px 5px rgba(0, 0, 0, 0.12);
+                margin-left: 70px;
+                margin-top: 80px;
+
+            }
+
+            .contact-details {
+                width: 400px;
+                margin-left: 80px;
+
+            }
+
+            .phone {
+                justify-content: center;
+                gap: 25px;
+                padding-top: 30px;
+                margin-top: 60px;
+                box-shadow: 3px 3px 20px 5px rgba(0, 0, 0, 0.12);
+            }
+
+            .contact-section {
+                justify-content: center;
+                margin-bottom: 50px;
+            }
+
+            .textarea {
+                width: 380px;
+                border-radius: 25px;
+                background-color: whitesmoke;
+                border: 0px;
+                height: 40px;
+                padding-left: 15px;
+                margin-top: 10px;
+            }
+
+            #map-img {
+                width: 600px;
+                height: 300px;
+            }
+
+            .map-section {
+                text-align: center;
+                margin-bottom: 50px;
+            }
+        }
+
+        /* small laptop  */
+        @media (min-width:769px) and (max-width:1024px) {
+            .home-text {
+                margin-left: 430px;
+            }
+
+            .contact-container {
+                border: 0px solid white;
+                background-color: white;
+                width: 450px;
+                height: 650px;
+                border-radius: 20px;
+                text-align: start;
+                padding-top: 20px;
+                padding-left: 20px;
+                box-shadow: 3px 3px 20px 5px rgba(0, 0, 0, 0.12);
+                margin-left: 70px;
+                margin-top: 80px;
+
+            }
+
+            .contact-details {
+                width: 400px;
+
+            }
+
+            .phone {
+                justify-content: center;
+                gap: 25px;
+                padding-top: 30px;
+                margin-top: 60px;
+                box-shadow: 3px 3px 20px 5px rgba(0, 0, 0, 0.12);
+            }
+
+            .contact-section {
+                justify-content: center;
+                display: flex;
+                margin-bottom: 50px;
+            }
+
+            .textarea {
+                width: 380px;
+                border-radius: 25px;
+                background-color: whitesmoke;
+                border: 0px;
+                height: 40px;
+                padding-left: 15px;
+                margin-top: 10px;
+            }
+
+            #map-img {
+                width: 800px;
+                height: 400px;
+            }
+
+            .map-section {
+                text-align: center;
+                margin-bottom: 50px;
+            }
+        }
+
+        /* laptop */
+        @media (min-width:1025px) and (max-width:1440px) {
+            .home-text {
+                margin-left: 630px;
+            }
+
+            .contact-container {
+                border: 0px solid white;
+                background-color: white;
+                width: 450px;
+                height: 650px;
+                border-radius: 20px;
+                text-align: start;
+                padding-top: 20px;
+                padding-left: 20px;
+                box-shadow: 3px 3px 20px 5px rgba(0, 0, 0, 0.12);
+                margin-left: 70px;
+                margin-top: 80px;
+
+            }
+
+            .contact-details {
+                width: 700px;
+
+            }
+
+            .phone {
+                justify-content: center;
+                gap: 25px;
+                padding-top: 30px;
+                margin-top: 60px;
+                box-shadow: 3px 3px 20px 5px rgba(0, 0, 0, 0.12);
+            }
+
+            .contact-section {
+                justify-content: center;
+                display: flex;
+                margin-bottom: 50px;
+            }
+
+            .textarea {
+                width: 380px;
+                border-radius: 25px;
+                background-color: whitesmoke;
+                border: 0px;
+                height: 40px;
+                padding-left: 15px;
+                margin-top: 10px;
+            }
+
+            #map-img {
+                width: 1200px;
+                height: 600px;
+            }
+
+            .map-section {
+                text-align: center;
+                margin-bottom: 50px;
+            }
+        }
+
+        /* large laptop */
+        @media(min-width:1441px) and (max-width:2560px) {
+            .home-text {
+                margin-left: 1200px;
+            }
+
+            .contact-container {
+                border: 0px solid white;
+                background-color: white;
+                width: 450px;
+                height: 650px;
+                border-radius: 20px;
+                text-align: start;
+                padding-top: 20px;
+                padding-left: 20px;
+                box-shadow: 3px 3px 20px 5px rgba(0, 0, 0, 0.12);
+                margin-left: 70px;
+                margin-top: 80px;
+
+            }
+
+            .contact-details {
+                width: 900px;
+
+            }
+
+            .phone {
+                justify-content: center;
+                gap: 25px;
+                padding-top: 30px;
+                margin-top: 60px;
+                box-shadow: 3px 3px 20px 5px rgba(0, 0, 0, 0.12);
+            }
+
+            .contact-section {
+                justify-content: center;
+                display: flex;
+                margin-bottom: 50px;
+            }
+
+            .contact-icon {
+                display: flex;
+            }
+
+            .textarea {
+                width: 380px;
+                border-radius: 25px;
+                background-color: whitesmoke;
+                border: 0px;
+                height: 40px;
+                padding-left: 15px;
+                margin-top: 10px;
+            }
+
+            #map-img {
+                width: 1500px;
+                height: 800px;
+            }
+
+            .map-section {
+                text-align: center;
+                margin-bottom: 50px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <section class="Header">
+        <!--top Header-->
+        <div class="topbar d-none d-md-block">
+            <div class="container-fluid d-flex justify-content-between align-items-center">
+                <div class="d-flex gap-3 align-items-center mt-2">
+                    <i class="fa-solid fa-envelope" style="color:orangered"></i>
+                    <small>info@company.com</small>
+                    <i class="fa-solid fa-map" style="color:orangered;margin-left:12px"></i>
+                    <small>Sunny Isles Beach,FL 33160</small>
+                </div>
+                <div>
+                    <i class="fa-brands fa-facebook social-icon" aria-hidden="true"></i>
+                    <i class="fa-brands fa-twitter social-icon" aria-hidden="true"></i>
+                    <i class="fa-brands fa-linkedin social-icon" aria-hidden="true"></i>
+                    <i class="fa-brands fa-instagram social-icon" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+        <hr class="d-none d-md-block">
+        <!-- header Nav Bar   -->
+        <nav class="navbar navbar-expand-lg bg-white">
+            <div class="container-fluid">
+                <a class="navbar-brand brand" href="#">
+                    <h3><b>VILLA</b></h3>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="./home.html"><b>Home</b></a></li>
+                        <li class="nav-item"><a class="nav-link" href="./properties.html"><b>Properties</b></a></li>
+                        <li class="nav-item"><a class="nav-link" href="./Propertydetails.html"><b>Property Details</b></a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="./contactus.html"><b>Contact us</b></a></li>
+                        <div class="headsb"><button class="schedule"><i class="fa-solid fa-calendar"
+                                    style="color: white;" id="calender"></i>schedule a visit</button></div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <section>
+        <div
+            style="background-image: url(../Assests/page-heading-bg.jpg);background-size: cover;width: 100%; height: 300px;text-align: center; align-content: center;">
+            <p class="home-text" style="width: 150px;height: 30px;background-color: white;">home/contact us</p>
+            <p class="display-4 fw-bolder text-light text-opacity-90">CONTACT US</p>
+        </div>
+    </section>
+    <section class="contact-section container-fluid">
+        <div class="contact-details">
+            <p style="color: red; padding-top: 100px;"><b> | CONTACT US</b></p>
+            <h3 class="h-1 fw-bolder " id="vdtext">Get In Touch With</h3>
+            <h3 class="h-1 fw-bolder ">Our Agents</h3>
+            <br>
+            <p>When you really need to download best websites, please remember our website XYZ.
+                Also, tell your friends about our website. Thank you for visiting.
+                There is a variety of Bootstrap HTML CSS templates on our website.
+                If you need more information, please contact us.</p>
+            <div class="contact-icon  gap-5">
+                <div class="phone d-flex"
+                    style="width: 270px;height: 100px;border: 0px;border-radius: 15px;background-color: whitesmoke;">
+                    <div><img src="../Assests/phone-icon.png" alt=""></div>
+                    <div class="text-secondary"><b style="color: black;">010-020-0340</b><br>Phone Number</div>
+                </div>
+                <div class="phone d-flex"
+                    style="width: 270px;height: 100px;border: 0px;border-radius: 15px;background-color: whitesmoke;">
+                    <div><img src="../Assests/email-icon.png" alt=""></div>
+                    <div class="text-secondary"><b style="color: black;">info@villa.co</b><br>Business Email</div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="contact-container">
+                <label for="first name" style="margin-top: 25px;">First Name</label><br>
+                <input type="text" placeholder="your name" id="first name" class="textarea"><br>
+                <label for="email" style="margin-top: 25px;">Email Address</label><br>
+                <input type="email" placeholder="your E-mail" id="email" class="textarea"><br>
+                <label for="subject" style="margin-top: 25px;">Subject</label><br>
+                <input type="text" placeholder="subject" id="subject" class="textarea"><br>
+                <label for="comment" style="margin-top: 25px;">Message</label><br>
+                <textarea name="Message" id="comment" placeholder="Your Message" rows="5" cols="50"
+                    class="textarea"></textarea>
+                <button
+                    style="border: 0;background-color: black;color: white;border-radius: 20px;height: 40px;width: 150px;margin-top: 40px;">Send
+                    Message</button>
+            </div>
+        </div>
+    </section>
+    <!-- map section -->
+    <section class="map-section container-fluid">
+        <div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18684.436161674337!2d-80.13589854030133!3d25.94531665309018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9add4b4ac788f%3A0xe77469d09480fcdb!2sSunny%20Isles%20Beach!5e0!3m2!1sen!2sin!4v1762784259786!5m2!1sen!2sin"
+                id="map-img" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>
+    </section>
+    <!-- Footer Section  -->
+    <section class="footer container-fluid">
+        <div
+            style="width: 100%;height: 100px;background-color: black;color: white;text-align: center;align-content: center;">
+            <p>Copyright &copy; 2048 Villa Agency Co.,Ltd.All rights reserved.Design:Abhinay</p>
+        </div>
+    </section>
+
+    <script src="./bootstrap.js"></script>
+</body>
+
+</html>

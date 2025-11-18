@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-…(integrity hash)…" crossorigin="anonymous" referrerpolicy="no-referrer"   />
+  <link rel="stylesheet" href="./bootstrap.css">
+  <title>Document</title>
+  <style>
+    .Header {
+      position: sticky;
+      top: 0px;
+      z-index: 999999;
+      background-color: white;
+    }
+
+    .topbar {
+      align-content: center;
+      justify-items: center;
+      margin-left: 40px;
+      margin-right: 40px;
+    }
+
+    .social-icon {
+      border: 0px solid;
+      background-color: gray;
+      border-radius: 50%;
+      text-align: center;
+      align-content: center;
+      color: white;
+      height: 35px;
+      width: 35px;
+      margin-top: 10px;
+    }
+
+    .social-icon:hover {
+      background-color: orangered;
+    }
+
+    #navbarNav {
+      margin-right: 20px;
+      margin-left: 15px;
+    }
+
+    .navbar-brand {
+      margin-left: 40px;
+    }
+
+    .nav-item {
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+
+    .schedule {
+      background-color: black;
+      color: orangered;
+      width: 180px;
+      height: 40px;
+      border-bottom-left-radius: 100px;
+      border-bottom-right-radius: 100px;
+      border-top-right-radius: 100px;
+      border-top-left-radius: 100px;
+      padding-bottom: 20px;
+      padding-right: 20px;
+      padding-bottom: 20px;
+      align-content: center;
+      text-align: center;
+      margin-right: 10px;
+    }
+
+    #calender {
+      border: 1px solid orangered;
+      border-radius: 50%;
+      height: 40px;
+      width: 40px;
+      align-content: center;
+      text-align: center;
+      background-color: orangered;
+      margin-left: 0px;
+      position: relative;
+      top: -2px;
+      left: -16px;
+    }
+
+    .nav-link:hover {
+      color: orangered;
+    }
+
+    /* moblie */
+    @media(max-width:426px) {
+      .home-text {
+        margin-left: 150px;
+      }
+
+      .deal-button {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 40px;
+        justify-content: center;
+        justify-content: space-around;
+        row-gap: 20px;
+        padding-bottom: 20px;
+      }
+
+      .properties {
+        border: 0px solid whitesmoke;
+        background-color: whitesmoke;
+        width: 450px;
+        height: 570px;
+        border-radius: 10px;
+        text-align: center;
+        align-content: center;
+        margin-top: 30px;
+        margin-bottom: 50px;
+      }
+
+      .properties-containers {
+        justify-items: center;
+        margin-top: 50px;
+        margin-bottom: 80px;
+        row-gap: 30px;
+      }
+
+      .amount {
+        display: flex;
+        margin-top: 15px;
+      }
+
+      .villa-type {
+        width: 140px;
+        height: 30px;
+        margin-left: 50px;
+        margin-right: 80px;
+        align-content: center;
+        /* margin-top: 10px; */
+
+      }
+
+      .visit-btn {
+        border: 0px solid black;
+        background-color: black;
+        border-radius: 15px;
+        color: white;
+        width: 150px;
+        height: 30px;
+      }
+
+      .details {
+        display: flex;
+        margin-left: 50px;
+        text-align: left;
+        gap: 15px;
+      }
+    }
+
+    /* tablet */
+    @media (min-width:427px) and (max-width:768px) {
+      .home-text {
+        margin-left: 300px;
+      }
+
+      .deal-button {
+        display: flex;
+        margin-top: 40px;
+        justify-content: center;
+
+      }
+
+      .properties {
+        border: 0px solid whitesmoke;
+        background-color: whitesmoke;
+        width: 450px;
+        height: 570px;
+        border-radius: 10px;
+        text-align: center;
+        align-content: center;
+        margin-top: 50px;
+        margin-left: 150px;
+        margin-bottom: 50px;
+
+      }
+
+      .properties-containers {
+        display: grid;
+        justify-items: center;
+        margin-top: 50px;
+        margin-bottom: 100px;
+        row-gap: 30px;
+      }
+
+      .amount {
+        display: flex;
+        margin-top: 15px;
+      }
+
+      .villa-type {
+        width: 140px;
+        height: 30px;
+        margin-left: 50px;
+        margin-right: 80px;
+        align-content: center;
+        /* margin-top: 10px; */
+
+      }
+
+      .details {
+        display: flex;
+        margin-left: 50px;
+        text-align: left;
+        gap: 15px;
+      }
+
+      .visit-btn {
+        border: 0px solid black;
+        background-color: black;
+        border-radius: 15px;
+        color: white;
+        width: 150px;
+        height: 30px;
+      }
+    }
+
+    /* small laptop  */
+    @media (min-width:769px) and (max-width:1024px) {
+      .home-text {
+        margin-left: 430px;
+      }
+
+      .deal-button {
+        display: flex;
+        margin-top: 40px;
+        justify-content: center;
+
+      }
+
+      .properties {
+        border: 0px solid whitesmoke;
+        background-color: whitesmoke;
+        width: 450px;
+        height: 570px;
+        border-radius: 10px;
+        text-align: center;
+        align-content: center;
+        margin-top: 50px;
+        margin-left: 40px;
+      }
+
+      .properties-containers {
+        justify-items: center;
+        margin-top: 50px;
+        margin-bottom: 80px;
+        row-gap: 30px;
+
+      }
+
+      .amount {
+        display: flex;
+        margin-top: 15px;
+      }
+
+      .villa-type {
+        width: 140px;
+        height: 30px;
+        margin-left: 50px;
+        margin-right: 80px;
+        align-content: center;
+        /* margin-top: 10px; */
+
+      }
+
+      .details {
+        display: flex;
+        margin-left: 50px;
+        text-align: left;
+        gap: 15px;
+      }
+
+      .visit-btn {
+        border: 0px solid black;
+        background-color: black;
+        border-radius: 15px;
+        color: white;
+        width: 150px;
+        height: 30px;
+      }
+    }
+
+    /* laptop */
+    @media (min-width:1025px) and (max-width:1440px) {
+      .home-text {
+        margin-left: 630px;
+      }
+
+      .deal-button {
+        display: flex;
+        margin-top: 40px;
+        justify-content: center;
+
+      }
+
+      .properties {
+        border: 0px solid whitesmoke;
+        background-color: whitesmoke;
+        width: 450px;
+        height: 570px;
+        border-radius: 10px;
+        text-align: center;
+        align-content: center;
+        margin-top: 50px;
+        margin-left: 20px;
+      }
+
+      .properties-containers {
+        justify-items: center;
+        margin-top: 50px;
+        margin-bottom: 80px;
+        row-gap: 30px;
+      }
+
+      .amount {
+        display: flex;
+        margin-top: 15px;
+      }
+
+      .villa-type {
+        width: 140px;
+        height: 30px;
+        margin-left: 50px;
+        margin-right: 80px;
+        align-content: center;
+
+
+      }
+
+      .details {
+        display: flex;
+        margin-left: 50px;
+        text-align: left;
+        gap: 15px;
+      }
+
+      .visit-btn {
+        border: 0px solid black;
+        background-color: black;
+        border-radius: 15px;
+        color: white;
+        width: 150px;
+        height: 30px;
+      }
+    }
+
+    /* large laptop */
+    @media(min-width:1441px) and (max-width:2560px) {
+      .home-text {
+        margin-left: 1200px;
+      }
+
+      .deal-button {
+        display: flex;
+        margin-top: 40px;
+        justify-content: center;
+
+      }
+
+      .properties {
+        border: 0px solid whitesmoke;
+        background-color: whitesmoke;
+        width: 450px;
+        height: 570px;
+        border-radius: 10px;
+        text-align: center;
+        align-content: center;
+        margin-top: 50px;
+        margin-left: 150px;
+      }
+
+      .properties-containers {
+        justify-items: center;
+        margin-top: 50px;
+        margin-bottom: 80px;
+        row-gap: 30px;
+      }
+
+      .amount {
+        display: flex;
+        margin-top: 15px;
+      }
+
+      .villa-type {
+        width: 140px;
+        height: 30px;
+        margin-left: 50px;
+        margin-right: 80px;
+        align-content: center;
+        /* margin-top: 10px; */
+
+      }
+
+      .details {
+        display: flex;
+        margin-left: 50px;
+        text-align: left;
+        gap: 15px;
+      }
+
+      .visit-btn {
+        border: 0px solid black;
+        background-color: black;
+        border-radius: 15px;
+        color: white;
+        width: 150px;
+        height: 30px;
+      }
+    }
+
+    .deal button {
+      width: 120px;
+      height: 30px;
+      background-color: black;
+      color: white;
+      border-radius: 10px;
+      border: 0px solid;
+      margin-left: 20px;
+
+    }
+
+    .deal button:hover {
+      background-color: orangered;
+    }
+
+    .pg-btn {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      background-color: black;
+      color: white;
+      border: 0px solid;
+
+    }
+
+    .pg-btn:hover {
+      background-color: orangered;
+      border: 0px solid orangered;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="Header">
+    <!--top Header-->
+    <div class="topbar d-none d-md-block">
+      <div class="container-fluid d-flex justify-content-between align-items-center">
+        <div class="d-flex gap-3 align-items-center mt-2">
+          <i class="fa-solid fa-envelope" style="color:orangered"></i>
+          <small>info@company.com</small>
+          <i class="fa-solid fa-map" style="color:orangered;margin-left:12px"></i>
+          <small>Sunny Isles Beach,FL 33160</small>
+        </div>
+        <div>
+          <i class="fa-brands fa-facebook social-icon" aria-hidden="true"></i>
+          <i class="fa-brands fa-twitter social-icon" aria-hidden="true"></i>
+          <i class="fa-brands fa-linkedin social-icon" aria-hidden="true"></i>
+          <i class="fa-brands fa-instagram social-icon" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+    <hr class="d-none d-md-block">
+    <!-- header Nav Bar   -->
+    <nav class="navbar navbar-expand-lg bg-white">
+      <div class="container-fluid">
+        <a class="navbar-brand brand" href="#">
+          <h3><b>VILLA</b></h3>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="./home.html"><b>Home</b></a></li>
+            <li class="nav-item"><a class="nav-link" href="./properties.html"><b>Properties</b></a></li>
+            <li class="nav-item"><a class="nav-link" href="./Propertydetails.html"><b>Property Details</b></a></li>
+            <li class="nav-item"><a class="nav-link" href="./contactus.html"><b>Contact us</b></a></li>
+            <div class="headsb"><button class="schedule"><i class="fa-solid fa-calendar" style="color: white;"
+                  id="calender"></i>schedule a visit</button></div>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </section>
+  <section>
+    <div
+      style="background-image: url(../Assests/page-heading-bg.jpg);background-size: cover;width: 100%; height: 300px;text-align: center; align-content: center;">
+      <p class="home-text" style="width: 150px;height: 30px;background-color: white;">home/properties</p>
+      <p class="display-4 fw-bolder text-light text-opacity-90">PROPERTIES</p>
+    </div>
+  </section>
+  <!-- button section -->
+  <section class="deal-button container-fluid">
+    <div class="deal" id="btn1"><button>Show All</button></div>
+    <div class="deal" id="btn1"><button>Appartment</button></div>
+    <div class="deal" id="btn1"><button>Villa House</button></div>
+    <div class="deal" id="btn1"><button>Penthouse</button></div>
+  </section>
+  <!-- Properties Section -->
+  <section class="properties-container container-fluid d-flex flex-wrap" style="margin-bottom: 50px;">
+    <div class="properties">
+      <img src="../Assests/property-01.jpg" alt="" style="border-radius: 15px;">
+      <div class="amount">
+        <h5
+          style="border: 0px solid rgb(245, 184, 194); background-color:rgb(228, 173, 173); color:black; border-radius: 15px; "
+          class="villa-type">Luxury Villa</h5>
+        <h4 style="color: orangered;" class="num">$2.264.000</h4>
+      </div>
+      <h5 style="color: black;" class="mat mt-3 "><b>18 New Street Miami,OR 97219</b></h5>
+      <div class="details">
+        <h5 style="color: gray;">Bedrooms:<span style="color: black;">8</span></h5>
+        <h5 style="color: gray;">Bathrooms:<span style="color: black;">8</span></h5>
+      </div>
+      <div class="details">
+        <h5 style="color: gray;">Area:<span style="color: black;">545m2</span></h5>
+        <h5 style="color: gray;">Floor:<span style="color: black;">3</span></h5>
+        <h5 style="color: gray;">Parking:<span style="color: black;">6spot</span></h5>
+      </div>
+      <hr>
+      <div><button class="visit-btn">Schedule a visit</button></div>
+    </div>
+    <div class="properties">
+      <img src="../Assests/property-02.jpg" alt="" style="border-radius: 15px;">
+      <div class="amount">
+        <h5
+          style="border: 0px solid rgb(245, 184, 194); background-color:rgb(228, 173, 173); color:black; border-radius: 15px; "
+          class="villa-type">Luxury Villa</h5>
+        <h4 style="color: orangered;" class="num">$2.264.000</h4>
+      </div>
+      <h5 style="color: black;" class="mat mt-3 "><b>18 New Street Miami,OR 97219</b></h5>
+      <div class="details">
+        <h5 style="color: gray;">Bedrooms:<span style="color: black;">8</span></h5>
+        <h5 style="color: gray;">Bathrooms:<span style="color: black;">8</span></h5>
+      </div>
+      <div class="details">
+        <h5 style="color: gray;">Area:<span style="color: black;">545m2</span></h5>
+        <h5 style="color: gray;">Floor:<span style="color: black;">3</span></h5>
+        <h5 style="color: gray;">Parking:<span style="color: black;">6spot</span></h5>
+      </div>
+      <hr>
+      <div><button class="visit-btn">Schedule a visit</button></div>
+    </div>
+    <div class="properties">
+      <img src="../Assests/property-03.jpg" alt="" style="border-radius: 15px;">
+      <div class="amount">
+        <h5
+          style="border: 0px solid rgb(245, 184, 194); background-color:rgb(228, 173, 173); color:black; border-radius: 15px; "
+          class="villa-type">Luxury Villa</h5>
+        <h4 style="color: orangered;" class="num">$2.264.000</h4>
+      </div>
+      <h5 style="color: black;" class="mat mt-3 "><b>18 New Street Miami,OR 97219</b></h5>
+      <div class="details">
+        <h5 style="color: gray;">Bedrooms:<span style="color: black;">8</span></h5>
+        <h5 style="color: gray;">Bathrooms:<span style="color: black;">8</span></h5>
+      </div>
+      <div class="details">
+        <h5 style="color: gray;">Area:<span style="color: black;">545m2</span></h5>
+        <h5 style="color: gray;">Floor:<span style="color: black;">3</span></h5>
+        <h5 style="color: gray;">Parking:<span style="color: black;">6spot</span></h5>
+      </div>
+      <hr>
+      <div><button class="visit-btn">Schedule a visit</button></div>
+    </div>
+    <div class="properties">
+      <img src="../Assests/property-04.jpg" alt="" style="border-radius: 15px;">
+      <div class="amount">
+        <h5
+          style="border: 0px solid rgb(245, 184, 194); background-color:rgb(228, 173, 173); color:black; border-radius: 15px; "
+          class="villa-type">Luxury Villa</h5>
+        <h4 style="color: orangered;" class="num">$2.264.000</h4>
+      </div>
+      <h5 style="color: black;" class="mat mt-3 "><b>18 New Street Miami,OR 97219</b></h5>
+      <div class="details">
+        <h5 style="color: gray;">Bedrooms:<span style="color: black;">8</span></h5>
+        <h5 style="color: gray;">Bathrooms:<span style="color: black;">8</span></h5>
+      </div>
+      <div class="details">
+        <h5 style="color: gray;">Area:<span style="color: black;">545m2</span></h5>
+        <h5 style="color: gray;">Floor:<span style="color: black;">3</span></h5>
+        <h5 style="color: gray;">Parking:<span style="color: black;">6spot</span></h5>
+      </div>
+      <hr>
+      <div><button class="visit-btn">Schedule a visit</button></div>
+    </div>
+    <div class="properties">
+      <img src="../Assests/property-05.jpg" alt="" style="border-radius: 15px;">
+      <div class="amount">
+        <h5
+          style="border: 0px solid rgb(245, 184, 194); background-color:rgb(228, 173, 173); color:black; border-radius: 15px; "
+          class="villa-type">Luxury Villa</h5>
+        <h4 style="color: orangered;" class="num">$2.264.000</h4>
+      </div>
+      <h5 style="color: black;" class="mat mt-3 "><b>18 New Street Miami,OR 97219</b></h5>
+      <div class="details">
+        <h5 style="color: gray;">Bedrooms:<span style="color: black;">8</span></h5>
+        <h5 style="color: gray;">Bathrooms:<span style="color: black;">8</span></h5>
+      </div>
+      <div class="details">
+        <h5 style="color: gray;">Area:<span style="color: black;">545m2</span></h5>
+        <h5 style="color: gray;">Floor:<span style="color: black;">3</span></h5>
+        <h5 style="color: gray;">Parking:<span style="color: black;">6spot</span></h5>
+      </div>
+      <hr>
+      <div><button class="visit-btn">Schedule a visit</button></div>
+    </div>
+    <div class="properties">
+      <img src="../Assests/property-06.jpg" alt="" style="border-radius: 15px;">
+      <div class="amount">
+        <h5
+          style="border: 0px solid rgb(245, 184, 194); background-color:rgb(228, 173, 173); color:black; border-radius: 15px; "
+          class="villa-type">Luxury Villa</h5>
+        <h4 style="color: orangered;" class="num">$2.264.000</h4>
+      </div>
+      <h5 style="color: black;" class="mat mt-3 "><b>18 New Street Miami,OR 97219</b></h5>
+      <div class="details">
+        <h5 style="color: gray;">Bedrooms:<span style="color: black;">8</span></h5>
+        <h5 style="color: gray;">Bathrooms:<span style="color: black;">8</span></h5>
+      </div>
+      <div class="details">
+        <h5 style="color: gray;">Area:<span style="color: black;">545m2</span></h5>
+        <h5 style="color: gray;">Floor:<span style="color: black;">3</span></h5>
+        <h5 style="color: gray;">Parking:<span style="color: black;">6spot</span></h5>
+      </div>
+      <hr>
+      <div><button class="visit-btn">Schedule a visit</button></div>
+    </div>
+    <div class="properties">
+      <img src="../Assests/property-01.jpg" alt="" style="border-radius: 15px;">
+      <div class="amount">
+        <h5
+          style="border: 0px solid rgb(245, 184, 194); background-color:rgb(228, 173, 173); color:black; border-radius: 15px; "
+          class="villa-type">Luxury Villa</h5>
+        <h4 style="color: orangered;" class="num">$2.264.000</h4>
+      </div>
+      <h5 style="color: black;" class="mat mt-3 "><b>18 New Street Miami,OR 97219</b></h5>
+      <div class="details">
+        <h5 style="color: gray;">Bedrooms:<span style="color: black;">8</span></h5>
+        <h5 style="color: gray;">Bathrooms:<span style="color: black;">8</span></h5>
+      </div>
+      <div class="details">
+        <h5 style="color: gray;">Area:<span style="color: black;">545m2</span></h5>
+        <h5 style="color: gray;">Floor:<span style="color: black;">3</span></h5>
+        <h5 style="color: gray;">Parking:<span style="color: black;">6spot</span></h5>
+      </div>
+      <hr>
+      <div><button class="visit-btn">Schedule a visit</button></div>
+    </div>
+    <div class="properties">
+      <img src="../Assests/property-02.jpg" alt="" style="border-radius: 15px;">
+      <div class="amount">
+        <h5
+          style="border: 0px solid rgb(245, 184, 194); background-color:rgb(228, 173, 173); color:black; border-radius: 15px; "
+          class="villa-type">Luxury Villa</h5>
+        <h4 style="color: orangered;" class="num">$2.264.000</h4>
+      </div>
+      <h5 style="color: black;" class="mat mt-3 "><b>18 New Street Miami,OR 97219</b></h5>
+      <div class="details">
+        <h5 style="color: gray;">Bedrooms:<span style="color: black;">8</span></h5>
+        <h5 style="color: gray;">Bathrooms:<span style="color: black;">8</span></h5>
+      </div>
+      <div class="details">
+        <h5 style="color: gray;">Area:<span style="color: black;">545m2</span></h5>
+        <h5 style="color: gray;">Floor:<span style="color: black;">3</span></h5>
+        <h5 style="color: gray;">Parking:<span style="color: black;">6spot</span></h5>
+      </div>
+      <hr>
+      <div><button class="visit-btn">Schedule a visit</button></div>
+    </div>
+    <div class="properties">
+      <img src="../Assests/property-03.jpg" alt="" style="border-radius: 15px;">
+      <div class="amount">
+        <h5
+          style="border: 0px solid rgb(245, 184, 194); background-color:rgb(228, 173, 173); color:black; border-radius: 15px; "
+          class="villa-type">Luxury Villa</h5>
+        <h4 style="color: orangered;" class="num">$2.264.000</h4>
+      </div>
+      <h5 style="color: black;" class="mat mt-3 "><b>18 New Street Miami,OR 97219</b></h5>
+      <div class="details">
+        <h5 style="color: gray;">Bedrooms:<span style="color: black;">8</span></h5>
+        <h5 style="color: gray;">Bathrooms:<span style="color: black;">8</span></h5>
+      </div>
+      <div class="details">
+        <h5 style="color: gray;">Area:<span style="color: black;">545m2</span></h5>
+        <h5 style="color: gray;">Floor:<span style="color: black;">3</span></h5>
+        <h5 style="color: gray;">Parking:<span style="color: black;">6spot</span></h5>
+      </div>
+      <hr>
+      <div><button class="visit-btn">Schedule a visit</button></div>
+    </div>
+  </section>
+  <section class="d-flex mb-5 gap-3 justify-content-center">
+    <div><button class="pg-btn">1</button></div>
+    <div><button class="pg-btn">2</button></div>
+    <div><button class="pg-btn">3</button></div>
+    <div><button class="pg-btn">>></button></div>
+  </section>
+  <!-- Footer Section  -->
+  <section class="footer container-fluid">
+    <div
+      style="width: 100%;height: 100px;background-color: black;color: white;text-align: center;align-content: center;">
+      <p>Copyright &copy; 2048 Villa Agency Co.,Ltd.All rights reserved.Design:Abhinay</p>
+    </div>
+  </section>
+
+
+  <script src="./bootstrap.js"></script>
+</body>
+
+</html>

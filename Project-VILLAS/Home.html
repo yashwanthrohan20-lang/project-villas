@@ -1,0 +1,1860 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-…(integrity hash)…" crossorigin="anonymous" referrerpolicy="no-referrer"   />
+  <link rel="stylesheet" href="./bootstrap.css">
+  <title>villas</title>
+  <style>
+    .Header {
+      position: sticky;
+      top: 0px;
+      z-index: 999999;
+      background-color: white;
+    }
+
+    .topbar {
+      align-content: center;
+      justify-items: center;
+    }
+
+    .social-icon {
+      border: 0px solid;
+      background-color: gray;
+      border-radius: 50%;
+      text-align: center;
+      align-content: center;
+      color: white;
+      height: 35px;
+      width: 35px;
+      margin-top: 10px;
+    }
+
+    .social-icon:hover {
+      background-color: orangered;
+    }
+
+    #navbarNav {
+      margin-right: 20px;
+      margin-left: 15px;
+
+    }
+
+    .nav-item {
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+
+    .schedule {
+      background-color: black;
+      color: orangered;
+      width: 180px;
+      height: 40px;
+      border-bottom-left-radius: 100px;
+      border-bottom-right-radius: 100px;
+      border-top-right-radius: 100px;
+      border-top-left-radius: 100px;
+      padding-bottom: 20px;
+      padding-right: 20px;
+      padding-bottom: 20px;
+      align-content: center;
+      text-align: center;
+    }
+
+    #calender {
+      border: 1px solid orangered;
+      border-radius: 50%;
+      height: 40px;
+      width: 40px;
+      align-content: center;
+      text-align: center;
+      background-color: orangered;
+      margin-left: 0px;
+      position: relative;
+      top: -2px;
+      left: -16px;
+    }
+
+    .nav-link:hover {
+      color: orangered;
+    }
+
+    .banner {
+      align-content: center;
+      text-align: left;
+      margin-bottom: 200px;
+    }
+
+    @media(max-width:426px) {
+      body {
+        overflow-x: hidden;
+      }
+
+      .feature {
+        margin-bottom: 40px;
+      }
+
+      #imgbanner {
+        background-image: url("../Assests/video-frame.jpg");
+        height: 280px;
+        width: 100%;
+        background-size: cover;
+        position: relative;
+        bottom: 50px;
+        border-radius: 15px;
+        margin-top: 70px;
+      }
+
+      #video-play {
+        top: 120px;
+        left: 180px;
+        color: orangered;
+        border: 2px solid orangered;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background-color: whitesmoke;
+        text-align: center;
+        align-content: center;
+        box-shadow: 0 0 20px 5px tomato;
+        z-index: 999;
+      }
+
+      .card {
+        border: 1px solid rgb(240, 214, 207);
+        width: 200px;
+        height: 75px;
+        text-align: center;
+        align-content: center;
+        justify-content: center;
+        gap: 20px;
+        padding-top: 5px;
+        border-radius: 15px;
+        background-color: rgb(240, 214, 207);
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+      }
+
+      .card-container {
+        margin-top: 50px;
+        margin-left: 100px;
+        justify-content: space-evenly;
+      }
+
+      .dot {
+        border: 1px solid orangered;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        top: -15%;
+        right: -8%;
+        background-color: orangered;
+      }
+
+      .best-deal {
+        align-content: center;
+        margin-left: 30px;
+      }
+
+      .best-deal button {
+        margin-top: 10px;
+        border-radius: 5px;
+        width: 120px;
+        height: 40px;
+        background-color: black;
+        color: white;
+      }
+
+      .best-deal button:hover {
+        background-color: orangered;
+        color: white;
+        border-color: orangered;
+      }
+
+      .deal-container {
+        width: 260px;
+        height: 340px;
+        border: 1px solid rgb(186, 184, 184);
+        align-content: center;
+        text-align: center;
+        border-radius: 15px;
+        box-shadow: 2px 2px 2px 2px rgb(186, 184, 184);
+        margin-top: 30px;
+        margin-left: 25px;
+      }
+
+      .deal-section {
+        gap: 45px;
+        margin-top: 30px;
+        padding-bottom: 30px;
+      }
+
+      .bestdeal-container {
+        background-color: whitesmoke;
+      }
+
+      #deal {
+        margin-top: 40px;
+      }
+
+      .deal-about {
+        margin-top: 40px;
+      }
+
+      #image-deal {
+        width: 400px;
+        margin-top: 50px;
+      }
+
+      .properties {
+        border: 0px solid whitesmoke;
+        background-color: whitesmoke;
+        width: 450px;
+        height: 570px;
+        border-radius: 10px;
+        text-align: center;
+        align-content: center;
+        margin-top: 30px;
+        margin-bottom: 50px;
+      }
+
+      .properties-containers {
+        justify-items: center;
+        margin-top: 50px;
+        margin-bottom: 80px;
+        row-gap: 30px;
+      }
+
+      .amount {
+        display: flex;
+        margin-top: 15px;
+      }
+
+      .villa-type {
+        width: 140px;
+        height: 30px;
+        margin-left: 50px;
+        margin-right: 80px;
+        align-content: center;
+        /* margin-top: 10px; */
+
+      }
+
+      .details {
+        display: flex;
+        margin-left: 50px;
+        text-align: left;
+        gap: 15px;
+      }
+
+      .visit-btn {
+        border: 0px solid black;
+        background-color: black;
+        border-radius: 15px;
+        color: white;
+        width: 150px;
+        height: 30px;
+      }
+
+      .contact-container {
+        border: 0px solid white;
+        background-color: white;
+        width: 450px;
+        height: 650px;
+        border-radius: 20px;
+        text-align: start;
+        padding-top: 20px;
+        padding-left: 20px;
+        box-shadow: 3px 3px 20px 5px rgba(0, 0, 0, 0.12);
+        margin-left: 10px;
+        margin-top: 30px;
+
+
+      }
+
+      .phone {
+        justify-content: center;
+        gap: 15px;
+        padding-top: 30px;
+        margin-top: 20px;
+        margin-left: 20px;
+        box-shadow: 3px 3px 20px 5px rgba(0, 0, 0, 0.12);
+      }
+
+      .map {
+        text-align: start;
+        margin-left: 5px;
+        padding-top: 30px;
+      }
+
+      .contact-section {
+        margin-top: 20px;
+        height: 1600px;
+
+
+      }
+
+      .map iframe {
+        width: 400px;
+        height: 300px;
+        margin-left: 10px;
+      }
+
+      .contact-bg {
+        width: 100%;
+        height: 300px;
+        text-align: center;
+      }
+
+      .contact-icon {
+        flex-wrap: wrap;
+
+      }
+
+      .footer {
+        width: 100%;
+        height: 100px;
+        background-color: black;
+        color: white;
+        text-align: center;
+        align-content: center;
+        position: relative;
+        bottom: 1px;
+      }
+    }
+
+
+
+    /* tablet */
+    @media (min-width:427px) and (max-width:768px) {
+      body {
+        overflow-x: hidden;
+      }
+
+      .banner {
+        margin-bottom: 70px;
+      }
+
+      .featured {
+        margin-left: 10px;
+        justify-content: space-around;
+
+      }
+
+      .feature {
+        margin-bottom: 40px;
+      }
+
+      #imgbanner {
+        background-image: url("../Assests/video-frame.jpg");
+        height: 350px;
+        width: 70%;
+        background-size: cover;
+        position: relative;
+        left: 120px;
+        bottom: 50px;
+        border-radius: 15px;
+        margin-top: 70px;
+      }
+
+      #video-play {
+        top: 140px;
+        left: 230px;
+        color: orangered;
+        border: 2px solid orangered;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background-color: whitesmoke;
+        text-align: center;
+        align-content: center;
+        box-shadow: 0 0 20px 5px tomato;
+        z-index: 999;
+      }
+
+      .card {
+        border: 1px solid rgb(240, 214, 207);
+        width: 200px;
+        height: 75px;
+        text-align: center;
+        align-content: center;
+        justify-content: center;
+        gap: 20px;
+        padding-top: 5px;
+        border-radius: 15px;
+        background-color: rgb(240, 214, 207);
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .card-container {
+        display: flex;
+        margin-top: 150px;
+        margin-bottom: 120px;
+        justify-content: space-evenly;
+      }
+
+      .dot {
+        border: 1px solid orangered;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        top: -15%;
+        right: -8%;
+        background-color: orangered;
+      }
+
+      .best-deal {
+        display: flex;
+        align-content: center;
+        margin-left: 30px;
+        gap: 25px;
+      }
+
+      #btn {
+        margin-left: 80px;
+      }
+
+      .best-deal button {
+        margin-top: 60px;
+        border-radius: 5px;
+        gap: 30px;
+        width: 120px;
+        height: 40px;
+        background-color: black;
+        color: white;
+      }
+
+      .best-deal button:hover {
+        background-color: orangered;
+        color: white;
+        border-color: orangered;
+      }
+
+      .deal-container {
+        width: 260px;
+        height: 340px;
+        border: 1px solid rgb(186, 184, 184);
+        align-content: center;
+        text-align: center;
+        border-radius: 15px;
+        box-shadow: 2px 2px 2px 2px rgb(186, 184, 184);
+        margin-top: 30px;
+        margin-left: 25px;
+      }
+
+      .deal {
+        margin-top: 45px;
+      }
+
+      .deal-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      .bestdeal-container {
+        background-color: whitesmoke;
+      }
+
+      #image-deal {
+        width: 350px;
+        margin-top: 50px;
+      }
+
+      .properties {
+        border: 0px solid whitesmoke;
+        background-color: whitesmoke;
+        width: 450px;
+        height: 570px;
+        border-radius: 10px;
+        text-align: center;
+        align-content: center;
+        margin-top: 50px;
+        margin-left: 150px;
+        margin-bottom: 50px;
+
+      }
+
+      .properties-containers {
+        display: grid;
+        justify-items: center;
+        margin-top: 50px;
+        margin-bottom: 100px;
+        row-gap: 30px;
+      }
+
+      .amount {
+        display: flex;
+        margin-top: 15px;
+      }
+
+      .villa-type {
+        width: 140px;
+        height: 30px;
+        margin-left: 50px;
+        margin-right: 80px;
+        align-content: center;
+        /* margin-top: 10px; */
+
+      }
+
+      .details {
+        display: flex;
+        margin-left: 50px;
+        text-align: left;
+        gap: 15px;
+      }
+
+      .visit-btn {
+        border: 0px solid black;
+        background-color: black;
+        border-radius: 15px;
+        color: white;
+        width: 150px;
+        height: 30px;
+      }
+
+      .contact-container {
+        border: 0px solid white;
+        background-color: white;
+        width: 450px;
+        height: 650px;
+        border-radius: 20px;
+        text-align: start;
+        padding-top: 20px;
+        padding-left: 20px;
+        box-shadow: 3px 3px 20px 5px rgba(0, 0, 0, 0.12);
+        margin-left: 5px;
+        margin-left: 5px;
+        margin-top: 30px;
+
+      }
+
+      .phone {
+        justify-content: center;
+        gap: 25px;
+        padding-top: 30px;
+        margin-top: 60px;
+        box-shadow: 3px 3px 20px 5px rgba(0, 0, 0, 0.12);
+      }
+
+      .map {
+        text-align: start;
+        margin-left: 5px;
+        padding-top: 30px;
+      }
+
+      .contact-section {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        justify-content: center;
+        height: 1600px;
+      }
+
+      .contact-item {
+        justify-content: center;
+      }
+
+      .contact-bg {
+        width: 100%;
+        height: 500px;
+        text-align: center;
+      }
+
+      .footer {
+        width: 100%;
+        height: 100px;
+        background-color: black;
+        color: white;
+        text-align: center;
+        align-content: center;
+        position: relative;
+        bottom: 1px;
+      }
+
+
+    }
+
+
+    /* small laptop */
+    @media (min-width:769px) and (max-width:1024px) {
+      body {
+        overflow-x: hidden;
+      }
+
+      .banner {
+        margin-bottom: 70px;
+      }
+
+      .featured {
+        margin-left: 10px;
+        justify-content: space-around;
+      }
+
+      .feature {
+        margin-bottom: 40px;
+      }
+
+      #imgbanner {
+        background-image: url("../Assests/video-frame.jpg");
+        height: 400px;
+        width: 70%;
+        background-size: cover;
+        position: relative;
+        left: 120px;
+        bottom: 50px;
+        border-radius: 15px;
+        margin-top: 70px;
+      }
+
+      #video-play {
+        /* position: relative; */
+        top: 170px;
+        left: 350px;
+        color: orangered;
+        border: 2px solid orangered;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background-color: whitesmoke;
+        text-align: center;
+        align-content: center;
+        box-shadow: 0 0 20px 5px tomato;
+        z-index: 999;
+      }
+
+      .card {
+        border: 1px solid rgb(240, 214, 207);
+        width: 250px;
+        height: 95px;
+        text-align: center;
+        align-content: center;
+        justify-content: center;
+        gap: 20px;
+        padding-top: 5px;
+        border-radius: 15px;
+        background-color: rgb(240, 214, 207);
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .card-container {
+        display: flex;
+        margin-top: 200px;
+        margin-bottom: 120px;
+        justify-content: space-evenly;
+      }
+
+      .dot {
+        border: 1px solid orangered;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        top: -15%;
+        right: -8%;
+        background-color: orangered;
+      }
+
+      .best-deal {
+        display: flex;
+        align-content: center;
+        margin-left: 30px;
+        gap: 25px;
+      }
+
+      #btn {
+        margin-left: 100px;
+      }
+
+      .best-deal button {
+        margin-top: 60px;
+        border-radius: 5px;
+        gap: 30px;
+        width: 120px;
+        height: 40px;
+        background-color: black;
+        color: white;
+      }
+
+      .best-deal button:hover {
+        background-color: orangered;
+        color: white;
+        border-color: orangered;
+      }
+
+      .deal-container {
+        width: 260px;
+        height: 340px;
+        border: 1px solid rgb(186, 184, 184);
+        align-content: center;
+        text-align: center;
+        border-radius: 15px;
+        box-shadow: 2px 2px 2px 2px rgb(186, 184, 184);
+        margin-top: 30px;
+      }
+
+      .deal {
+        margin-top: 45px;
+      }
+
+      .deal-section {
+        display: flex;
+        gap: 15px;
+        margin-top: 50px;
+        justify-content: center;
+        padding-bottom: 70px;
+      }
+
+      .bestdeal-container {
+        background-color: whitesmoke;
+      }
+
+      #image-deal {
+        width: 400px;
+        margin-top: 30px;
+      }
+
+      .properties {
+        border: 0px solid whitesmoke;
+        background-color: whitesmoke;
+        width: 450px;
+        height: 570px;
+        border-radius: 10px;
+        text-align: center;
+        align-content: center;
+        margin-top: 50px;
+        margin-left: 40px;
+      }
+
+      .properties-containers {
+        justify-items: center;
+        margin-top: 50px;
+        margin-bottom: 80px;
+        row-gap: 30px;
+
+      }
+
+      .amount {
+        display: flex;
+        margin-top: 15px;
+      }
+
+      .villa-type {
+        width: 140px;
+        height: 30px;
+        margin-left: 50px;
+        margin-right: 80px;
+        align-content: center;
+        /* margin-top: 10px; */
+
+      }
+
+      .details {
+        display: flex;
+        margin-left: 50px;
+        text-align: left;
+        gap: 15px;
+      }
+
+      .visit-btn {
+        border: 0px solid black;
+        background-color: black;
+        border-radius: 15px;
+        color: white;
+        width: 150px;
+        height: 30px;
+      }
+
+      .contact-container {
+        border: 0px solid white;
+        background-color: white;
+        width: 450px;
+        height: 650px;
+        border-radius: 20px;
+        text-align: start;
+        padding-top: 20px;
+        padding-left: 20px;
+        box-shadow: 3px 3px 20px 5px rgba(0, 0, 0, 0.12);
+        margin-left: 50px;
+        margin-top: 30px;
+
+
+      }
+
+      .phone {
+        justify-content: center;
+        gap: 25px;
+        padding-top: 30px;
+        margin-top: 60px;
+        box-shadow: 3px 3px 20px 5px rgba(0, 0, 0, 0.12);
+      }
+
+      .map {
+        text-align: start;
+        margin-left: 5px;
+        padding-top: 30px;
+      }
+
+      .contact-section {
+        margin-top: 50px;
+        justify-content: center;
+        height: 1600px;
+      }
+
+      .contact-item {
+        justify-content: center;
+      }
+
+      .contact-bg {
+        width: 100%;
+        height: 500px;
+        text-align: center;
+      }
+
+      .footer {
+        width: 100%;
+        height: 100px;
+        background-color: black;
+        color: white;
+        text-align: center;
+        align-content: center;
+        position: relative;
+        bottom: 1px;
+      }
+    }
+
+
+
+    /* laptop */
+
+    @media (min-width:1025px) and (max-width:1440px) {
+      body {
+        overflow-x: hidden;
+      }
+
+      .featured {
+        justify-content: center;
+        margin-bottom: 40px;
+        padding-bottom: 40px;
+        margin-right: 30px;
+        margin-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      #imgbanner {
+        background-image: url("../Assests/video-frame.jpg");
+        height: 500px;
+        width: 1200px;
+        background-size: cover;
+        position: relative;
+        left: 110px;
+        bottom: 50px;
+        border-radius: 15px;
+        margin-top: 70px;
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        border: 1px solid rgb(240, 214, 207);
+        width: 250px;
+        height: 95px;
+        text-align: center;
+        align-content: center;
+        justify-content: center;
+        gap: 20px;
+        padding-top: 5px;
+        border-radius: 15px;
+        background-color: rgb(240, 214, 207);
+      }
+
+      #video-play {
+        /* position: relative; */
+        top: 220px;
+        left: 550px;
+        color: orangered;
+        border: 2px solid orangered;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background-color: whitesmoke;
+        text-align: center;
+        align-content: center;
+        box-shadow: 0 0 20px 5px tomato;
+        z-index: 999;
+      }
+
+      .card-container {
+        display: flex;
+        margin-top: 350px;
+        margin-bottom: 120px;
+        justify-content: space-evenly;
+      }
+
+      .dot {
+        border: 1px solid orangered;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        top: -15%;
+        right: -8%;
+        background-color: orangered;
+      }
+
+      .best-deal {
+        display: flex;
+        align-content: center;
+        margin-left: 130px;
+        gap: 25px;
+      }
+
+      #btn {
+        margin-left: 400px;
+      }
+
+      .best-deal button {
+        margin-top: 60px;
+        border-radius: 5px;
+        gap: 30px;
+        width: 120px;
+        height: 40px;
+        background-color: black;
+        color: white;
+      }
+
+      .best-deal button:hover {
+        background-color: orangered;
+        color: white;
+        border-color: orangered;
+      }
+
+      .deal-container {
+        width: 260px;
+        height: 340px;
+        border: 1px solid rgb(186, 184, 184);
+        align-content: center;
+        text-align: center;
+        border-radius: 15px;
+        box-shadow: 2px 2px 2px 2px rgb(186, 184, 184);
+        margin-top: 30px;
+      }
+
+      .deal {
+        margin-top: 45px;
+      }
+
+      .deal-section {
+        display: flex;
+        gap: 50px;
+        margin-top: 50px;
+        justify-content: center;
+        padding-bottom: 50px;
+      }
+
+      .bestdeal-container {
+        background-color: whitesmoke;
+      }
+
+      .properties {
+        border: 0px solid whitesmoke;
+        background-color: whitesmoke;
+        width: 450px;
+        height: 570px;
+        border-radius: 10px;
+        text-align: center;
+        align-content: center;
+        margin-top: 50px;
+        margin-left: 20px;
+      }
+
+      .properties-containers {
+        justify-items: center;
+        margin-top: 50px;
+        margin-bottom: 80px;
+        row-gap: 30px;
+      }
+
+      .amount {
+        display: flex;
+        margin-top: 15px;
+      }
+
+      .villa-type {
+        width: 140px;
+        height: 30px;
+        margin-left: 50px;
+        margin-right: 80px;
+        align-content: center;
+
+
+      }
+
+      .details {
+        display: flex;
+        margin-left: 50px;
+        text-align: left;
+        gap: 15px;
+      }
+
+      .visit-btn {
+        border: 0px solid black;
+        background-color: black;
+        border-radius: 15px;
+        color: white;
+        width: 150px;
+        height: 30px;
+      }
+
+      .contact-container {
+        border: 0px solid white;
+        background-color: white;
+        width: 450px;
+        height: 650px;
+        border-radius: 20px;
+        text-align: start;
+        padding-top: 20px;
+        padding-left: 20px;
+        box-shadow: 3px 3px 20px 5px rgba(0, 0, 0, 0.12);
+        margin-left: 70px;
+        margin-top: 30px;
+
+      }
+
+      .phone {
+        justify-content: center;
+        /* justify-content: space-around; */
+        gap: 25px;
+        padding-top: 30px;
+        margin-top: 60px;
+        box-shadow: 3px 3px 20px 5px rgba(0, 0, 0, 0.12);
+      }
+
+      .map {
+        text-align: start;
+        margin-left: 150px;
+        padding-top: 30px;
+      }
+
+      .contact-section {
+        margin-top: 50px;
+        justify-content: center;
+        height: 1000px;
+      }
+
+      .contact-bg {
+        width: 100%;
+        height: 500px;
+        text-align: center;
+      }
+
+      .footer {
+        width: 100%;
+        height: 100px;
+        background-color: black;
+        color: white;
+        text-align: center;
+        align-content: center;
+        position: relative;
+      }
+    }
+
+
+
+
+    /*large laptop */
+    @media(min-width:1441px) and (max-width:2560px) {
+      body {
+        overflow-x: hidden;
+      }
+
+      .featured {
+
+        justify-content: space-evenly;
+      }
+
+      #imgbanner {
+        background-image: url("../Assests/video-frame.jpg");
+        height: 500px;
+        width: 90%;
+        background-size: cover;
+        position: relative;
+        left: 130px;
+        bottom: 50px;
+        border-radius: 15px;
+        margin-top: 70px;
+      }
+
+      #video-play {
+        /* position: relative; */
+        top: 220px;
+        left: 1100px;
+        color: orangered;
+        border: 2px solid orangered;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background-color: whitesmoke;
+        text-align: center;
+        align-content: center;
+        box-shadow: 0 0 20px 5px tomato;
+        z-index: 999;
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        border: 1px solid rgb(240, 214, 207);
+        width: 250px;
+        height: 95px;
+        text-align: center;
+        align-content: center;
+        justify-content: center;
+        gap: 20px;
+        padding-top: 5px;
+        border-radius: 15px;
+        background-color: rgb(240, 214, 207);
+      }
+
+      .card-container {
+        display: flex;
+        margin-top: 350px;
+        margin-bottom: 120px;
+        justify-content: space-evenly;
+      }
+
+      .dot {
+        border: 1px solid orangered;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        top: -15%;
+        right: -8%;
+        background-color: orangered;
+      }
+
+      .best-deal {
+        display: flex;
+        align-content: center;
+        justify-content: space-around;
+        margin-left: 130px;
+        gap: 25px;
+      }
+
+      #btn {
+        margin-left: 400px;
+      }
+
+      .best-deal button {
+        margin-top: 60px;
+        border-radius: 5px;
+        gap: 30px;
+        width: 120px;
+        height: 40px;
+        background-color: black;
+        color: white;
+      }
+
+      .best-deal button:hover {
+        background-color: orangered;
+        color: white;
+        border-color: orangered;
+      }
+
+      .deal-container {
+        width: 260px;
+        height: 340px;
+        border: 1px solid rgb(186, 184, 184);
+        align-content: center;
+        text-align: center;
+        border-radius: 15px;
+        box-shadow: 2px 2px 2px 2px rgb(186, 184, 184);
+        margin-top: 30px;
+      }
+
+      .deal {
+        margin-top: 45px;
+      }
+
+      .deal-section {
+        display: flex;
+        gap: 250px;
+        margin-top: 50px;
+        justify-content: center;
+        padding-bottom: 80px;
+      }
+
+      .bestdeal-container {
+        background-color: whitesmoke;
+      }
+
+      .properties {
+        border: 0px solid whitesmoke;
+        background-color: whitesmoke;
+        width: 450px;
+        height: 570px;
+        border-radius: 10px;
+        text-align: center;
+        align-content: center;
+        margin-top: 50px;
+        margin-left: 150px;
+      }
+
+      .properties-containers {
+        justify-items: center;
+        margin-top: 50px;
+        margin-bottom: 80px;
+        row-gap: 30px;
+      }
+
+      .amount {
+        display: flex;
+        margin-top: 15px;
+      }
+
+      .villa-type {
+        width: 140px;
+        height: 30px;
+        margin-left: 50px;
+        margin-right: 80px;
+        align-content: center;
+        /* margin-top: 10px; */
+
+      }
+
+      .details {
+        display: flex;
+        margin-left: 50px;
+        text-align: left;
+        gap: 15px;
+      }
+
+      .visit-btn {
+        border: 0px solid black;
+        background-color: black;
+        border-radius: 15px;
+        color: white;
+        width: 150px;
+        height: 30px;
+      }
+
+      .contact-section {
+        margin-top: 50px;
+        justify-content: center;
+        margin-bottom: 500px;
+      }
+
+      .contact-container {
+        border: 0px solid white;
+        background-color: white;
+        width: 450px;
+        height: 650px;
+        border-radius: 20px;
+        text-align: start;
+        padding-top: 20px;
+        padding-left: 20px;
+        box-shadow: 3px 3px 20px 5px rgba(0, 0, 0, 0.12);
+        margin-left: 70px;
+        margin-top: 30px;
+
+      }
+
+      .phone {
+        justify-content: center;
+        /* justify-content: space-around; */
+        gap: 25px;
+        padding-top: 30px;
+        margin-top: 60px;
+        box-shadow: 3px 3px 20px 5px rgba(0, 0, 0, 0.12);
+      }
+
+      .map {
+        text-align: start;
+        margin-left: 700px;
+        padding-top: 30px;
+      }
+
+      .contact-bg {
+        width: 100%;
+        height: 500px;
+        text-align: center;
+      }
+
+      .footer {
+        width: 100%;
+        height: 100px;
+        background-color: black;
+        color: white;
+        text-align: center;
+        align-content: center;
+        position: relative;
+      }
+    }
+
+
+
+
+    #rental {
+      border: 1px solid orangered;
+      height: 80px;
+      width: 80px;
+      border-radius: 50%;
+      background-color: orangered;
+      text-align: center;
+      align-content: center;
+      position: relative;
+      right: -40px;
+      bottom: -240px;
+
+    }
+
+    #featbox {
+      border: 1px solid gray;
+      height: 490px;
+      width: 330px;
+      border-radius: 15px;
+      box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.12);
+      text-align: center;
+      align-content: center;
+      column-gap: 50px;
+      /* justify-content: space-around; */
+      justify-items: left;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column
+    }
+
+    .featured {
+      margin-left: 20px;
+      text-align: left;
+      margin-top: 40px;
+      gap: 12px;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .feature {
+      margin-left: 20px;
+      margin-right: 60px;
+
+    }
+
+    #feature-icon {
+      margin-top: 15px;
+      margin-bottom: 10px;
+    }
+
+    #feature-icon1 {
+      margin-top: 40px;
+      margin-bottom: 10px;
+    }
+
+    .video-bg {
+      margin-bottom: 25px;
+      margin-top: 85px;
+      position: relative;
+      text-align: center;
+    }
+
+    #video-play {
+      position: absolute;
+      z-index: 999;
+    }
+
+    #vdtext {
+      padding-top: 10px;
+
+    }
+
+    .accordion-button:hover {
+      color: orangered;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="Header">
+    <!--top Header-->
+    <div class="topbar d-none d-md-block">
+      <div class="container-fluid d-flex justify-content-between align-items-center">
+        <div class="d-flex gap-3 align-items-center mt-2">
+          <i class="fa-solid fa-envelope" style="color:orangered"></i>
+          <small>info@company.com</small>
+          <i class="fa-solid fa-map" style="color:orangered;margin-left:12px"></i>
+          <small>Sunny Isles Beach,FL 33160</small>
+        </div>
+        <div>
+          <i class="fa-brands fa-facebook social-icon" aria-hidden="true"></i>
+          <i class="fa-brands fa-twitter social-icon" aria-hidden="true"></i>
+          <i class="fa-brands fa-linkedin social-icon" aria-hidden="true"></i>
+          <i class="fa-brands fa-instagram social-icon" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+    <hr class="d-none d-md-block">
+    <!-- header Nav Bar   -->
+    <nav class="navbar navbar-expand-lg bg-white">
+      <div class="container-fluid">
+        <a class="navbar-brand brand" href="#">
+          <h3><b>VILLA</b></h3>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="./home.html"><b>Home</b></a></li>
+            <li class="nav-item"><a class="nav-link" href="./properties.html"><b>Properties</b></a></li>
+            <li class="nav-item"><a class="nav-link" href="./Propertydetails.html"><b>Property Details</b></a></li>
+            <li class="nav-item"><a class="nav-link" href="./contactus.html"><b>Contact us</b></a></li>
+            <div class="headsb"><button class="schedule"><i class="fa-solid fa-calendar" style="color: white;"
+                  id="calender"></i>schedule a visit</button></div>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </section>
+  <!-- banner section -->
+  <section class="container-fluid d-none d-md-block">
+    <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner " style="margin-top: 20px;">
+        <div class="carousel-item active">
+          <img src="../Assests/banner-01.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p style="color: black; background-color: white; width: 120px; height: 30px;">toronto,<span
+                style="color: orangered;">canada</span></p>
+            <p class=" banner display-5 fw-bolder text-uppercase">hurry up! <br>
+              get the best<br>
+              villa for you<br></p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="../Assests/banner-02.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p style="color: black; background-color: white; width: 120px; height: 30px;">toronto,<span
+                style="color: orangered;">canada</span></p>
+            <p class=" banner display-5 fw-bolder text-uppercase">hurry up! <br>
+              get the best<br>
+              villa for you<br></p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="../Assests/banner-03.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <p style="color: black; background-color: white; width: 120px; height: 30px;">toronto,<span
+                style="color: orangered;">canada</span></p>
+            <p class=" banner display-5 fw-bolder text-uppercase">hurry up! <br>
+              get the best<br>
+              villa for you<br></p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+  <!-- Featured section -->
+  <section class="container-fluid">
+    <section class="featured">
+      <div class="feature d-none d-md-block" id="feature-image">
+        <span><i class="fa-solid fa-file-signature fa-2x text-light" id="rental"></i>
+          <img src="../Assests/featured.jpg" alt=""></span>
+      </div>
+      <div class="feature" style="text-align: left;">
+        <u style="color: red;"><b>| FEATURED</b></u>
+        <br>
+        <br>
+        <h2><b>BEST Appartment</b></h2>
+        <h2><b>& Sea View</b></h2>
+        <br>
+        <br>
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                aria-expanded="true" aria-controls="collapseOne">
+                <p>Get use full links</p>
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Lorem ipsum dolor sit amet.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                How does this work ?
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Lorem ipsum dolor sit amet.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Why is Villa Agency the best
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Lorem ipsum dolor sit amet.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="feature equal-glow" id="featbox">
+        <div class="d-flex gap-5">
+          <img src="../Assests/info-icon-01.png" alt="" id="feature-icon1">
+          <div style="text-align: left;" id="feature-icon1"><b>250 m2</b>
+            <P>Total space</P>
+          </div>
+        </div>
+        <hr>
+        <div class="d-flex gap-5">
+          <img src="../Assests/info-icon-02.png" alt="" id="feature-icon">
+          <div style="text-align: left;" id="feature-icon"><b>Contract</b><br>Contract ready
+          </div>
+        </div>
+        <hr>
+        <div class="d-flex gap-5">
+          <img src="../Assests/info-icon-03.png" alt="" id="feature-icon">
+          <div style="text-align: left;" id="feature-icon"><b>Payment</b><br>payment Process</div>
+        </div>
+        <hr>
+        <div class="d-flex gap-5">
+          <img src="../Assests/info-icon-04.png" alt="" id="feature-icon">
+          <div style="text-align: left;" id="feature-icon"><b>Safety</b><br>24/7 under Control</div>
+        </div>
+      </div>
+    </section>
+  </section>
+  <!-- video view section -->
+  <section class="container-fluid">
+    <section class="video-bg">
+      <div style="background-image: url(../Assests/video-bg.jpg);background-size: cover;width: 100%;height: 500px;">
+        <p style="color: red; padding-top: 100px;"><b> | video view</b></p>
+        <h3 class="h-1 fw-bolder text-light text-opacity-90 " id="vdtext">Get Closer View &</h3>
+        <h3 class="h-1 fw-bolder text-light text-opacity-90">Different Feeling</h3>
+        <div id="imgbanner">
+          <i class="fa-solid fa-play" id="video-play"></i>
+        </div>
+      </div>
+      <div class="card-container">
+        <div class="card">
+          <div class="dot"></div>
+          <h1 style="color: orangered;" class="display-5 fw-bold"><b>34</b></h1>
+          <p style="text-align: left;"><b>buildings <br>finished now</b></p>
+        </div>
+        <div class="card">
+          <div class="dot"></div>
+          <h1 style="color: orangered;" class="display-5 fw-bold"><b>12</b></h1>
+          <p style="text-align: left;"><b>Years <br>Experience</b></p>
+        </div>
+        <div class="card">
+          <div class="dot"></div>
+          <h1 style="color: orangered;" class="display-5 fw-bold"><b>24</b></h1>
+          <p style="text-align: left;"><b>Awards <br>Won 2023</b></p>
+        </div>
+      </div>
+    </section>
+  </section>
+  <!-- Deal Section -->
+  <section class="bestdeal-container container-fluid">
+    <section class="best-deal">
+      <div class="deal" id="deal">
+        <b style="color: orangered;">| BEST DEAL</b>
+        <h1><b>Find Your Best Deal</b></h1>
+        <h1><b>Right Now!</b></h1>
+      </div>
+      <div class="deal" id="btn"><button>Appartment</button></div>
+      <div class="deal" id="btn1"><button>Villa House</button></div>
+      <div class="deal" id="btn1"><button>Penthouse</button></div>
+    </section>
+    <section class="deal-section">
+      <div class="deal-container">
+        <span>
+          <p style="text-align: start; margin-left: 25px;">Total Flat Space<b style="margin-left: 30px;">185m2</b></p>
+        </span>
+        <hr width="210px" style="margin-left: 20px;">
+        <span>
+          <p style="text-align: start; margin-left: 25px;">Floor number<b style="margin-left: 60px;">26th</b></p>
+        </span>
+        <hr width="210px" style="margin-left: 20px;">
+        <span>
+          <p style="text-align: start; margin-left: 25px;">Number if rooms<b style="margin-left: 60px;">4</b></p>
+        </span>
+        <hr width="210px" style="margin-left: 20px;">
+        <span>
+          <p style="text-align: start; margin-left: 25px;">Parking Avaiable<b style="margin-left: 50px;">yes</b></p>
+        </span>
+        <hr width="210px" style="margin-left: 20px;">
+        <span>
+          <p style="text-align: start; margin-left: 25px;">Payment Process<b style="margin-left: 40px;">Bank</b></p>
+        </span>
+
+      </div>
+      <div id="deal-image">
+        <img src="../Assests/deal-01.jpg" alt="" id="image-deal">
+      </div>
+      <div class="deal-about" id="deal-info">
+        <p>
+        <h5><b>Extra Info About Proterty</b></h5>
+        </p>
+        <br>
+
+        Lorem ipsum dolor sit, amet consectetur adipisicing <br>
+        elit. Nulla, inventore. In unde labore a. <br>
+        vel blanditiis illum eius. Maiores a est <br>
+        voluptatem natus commodi, quo soluta dolor autem.
+        <br><br>
+        Lorem ipsum dolor sit amet consectetur adipisicing <br>
+        elit. Perspiciatis voluptates ipsam repellat quos <br>
+        rem sit fuga nulla optio animi facere doloremque. <br>
+
+        <br>
+        <br>
+        <div class="heads"><button class="schedule"><i class="fa-solid fa-calendar" style="color: white;"
+              id="calender"></i>schedule a visit</button></div>
+      </div>
+    </section>
+  </section>
+  <!-- Properties section -->
+  <section>
+    <section class="properties-header">
+      <div class="property-head" style="text-align: center;margin-top: 70px;">
+        <b style="color: orangered;">| PROPERTIES</b>
+        <h1><b>We Provide The Best</b></h1>
+        <h1><b>Property You Like</b></h1>
+      </div>
+    </section>
+    <section class="properties-container container-fluid d-flex flex-wrap">
+      <div class="properties">
+        <img src="../Assests/property-01.jpg" alt="" style="border-radius: 15px;">
+        <div class="amount">
+          <h5
+            style="border: 0px solid rgb(245, 184, 194); background-color:rgb(228, 173, 173); color:black; border-radius: 15px; "
+            class="villa-type">Luxury Villa</h5>
+          <h4 style="color: orangered;" class="num">$2.264.000</h4>
+        </div>
+        <h5 style="color: black;" class="mat mt-3 "><b>18 New Street Miami,OR 97219</b></h5>
+        <div class="details">
+          <h5 style="color: gray;">Bedrooms:<span style="color: black;">8</span></h5>
+          <h5 style="color: gray;">Bathrooms:<span style="color: black;">8</span></h5>
+        </div>
+        <div class="details">
+          <h5 style="color: gray;">Area:<span style="color: black;">545m2</span></h5>
+          <h5 style="color: gray;">Floor:<span style="color: black;">3</span></h5>
+          <h5 style="color: gray;">Parking:<span style="color: black;">6spot</span></h5>
+        </div>
+        <hr>
+        <div><button class="visit-btn">Schedule a visit</button></div>
+      </div>
+      <div class="properties">
+        <img src="../Assests/property-02.jpg" alt="" style="border-radius: 15px;">
+        <div class="amount">
+          <h5
+            style="border: 0px solid rgb(245, 184, 194); background-color:rgb(228, 173, 173); color:black; border-radius: 15px; "
+            class="villa-type">Luxury Villa</h5>
+          <h4 style="color: orangered;" class="num">$2.264.000</h4>
+        </div>
+        <h5 style="color: black;" class="mat mt-3 "><b>18 New Street Miami,OR 97219</b></h5>
+        <div class="details">
+          <h5 style="color: gray;">Bedrooms:<span style="color: black;">8</span></h5>
+          <h5 style="color: gray;">Bathrooms:<span style="color: black;">8</span></h5>
+        </div>
+        <div class="details">
+          <h5 style="color: gray;">Area:<span style="color: black;">545m2</span></h5>
+          <h5 style="color: gray;">Floor:<span style="color: black;">3</span></h5>
+          <h5 style="color: gray;">Parking:<span style="color: black;">6spot</span></h5>
+        </div>
+        <hr>
+        <div><button class="visit-btn">Schedule a visit</button></div>
+      </div>
+      <div class="properties">
+        <img src="../Assests/property-03 (1).jpg" alt="" style="border-radius: 15px;">
+        <div class="amount">
+          <h5
+            style="border: 0px solid rgb(245, 184, 194); background-color:rgb(228, 173, 173); color:black; border-radius: 15px; "
+            class="villa-type">Luxury Villa</h5>
+          <h4 style="color: orangered;" class="num">$2.264.000</h4>
+        </div>
+        <h5 style="color: black;" class="mat mt-3 "><b>18 New Street Miami,OR 97219</b></h5>
+        <div class="details">
+          <h5 style="color: gray;">Bedrooms:<span style="color: black;">8</span></h5>
+          <h5 style="color: gray;">Bathrooms:<span style="color: black;">8</span></h5>
+        </div>
+        <div class="details">
+          <h5 style="color: gray;">Area:<span style="color: black;">545m2</span></h5>
+          <h5 style="color: gray;">Floor:<span style="color: black;">3</span></h5>
+          <h5 style="color: gray;">Parking:<span style="color: black;">6spot</span></h5>
+        </div>
+        <hr>
+        <div><button class="visit-btn">Schedule a visit</button></div>
+      </div>
+      <div class="properties">
+        <img src="../Assests/property-04.jpg" alt="" style="border-radius: 15px;">
+        <div class="amount">
+          <h5
+            style="border: 0px solid rgb(245, 184, 194); background-color:rgb(228, 173, 173); color:black; border-radius: 15px; "
+            class="villa-type">Luxury Villa</h5>
+          <h4 style="color: orangered;" class="num">$2.264.000</h4>
+        </div>
+        <h5 style="color: black;" class="mat mt-3 "><b>18 New Street Miami,OR 97219</b></h5>
+        <div class="details">
+          <h5 style="color: gray;">Bedrooms:<span style="color: black;">8</span></h5>
+          <h5 style="color: gray;">Bathrooms:<span style="color: black;">8</span></h5>
+        </div>
+        <div class="details">
+          <h5 style="color: gray;">Area:<span style="color: black;">545m2</span></h5>
+          <h5 style="color: gray;">Floor:<span style="color: black;">3</span></h5>
+          <h5 style="color: gray;">Parking:<span style="color: black;">6spot</span></h5>
+        </div>
+        <hr>
+        <div><button class="visit-btn">Schedule a visit</button></div>
+      </div>
+      <div class="properties">
+        <img src="../Assests/property-05.jpg" alt="" style="border-radius: 15px;">
+        <div class="amount">
+          <h5
+            style="border: 0px solid rgb(245, 184, 194); background-color:rgb(228, 173, 173); color:black; border-radius: 15px; "
+            class="villa-type">Luxury Villa</h5>
+          <h4 style="color: orangered;" class="num">$2.264.000</h4>
+        </div>
+        <h5 style="color: black;" class="mat mt-3 "><b>18 New Street Miami,OR 97219</b></h5>
+        <div class="details">
+          <h5 style="color: gray;">Bedrooms:<span style="color: black;">8</span></h5>
+          <h5 style="color: gray;">Bathrooms:<span style="color: black;">8</span></h5>
+        </div>
+        <div class="details">
+          <h5 style="color: gray;">Area:<span style="color: black;">545m2</span></h5>
+          <h5 style="color: gray;">Floor:<span style="color: black;">3</span></h5>
+          <h5 style="color: gray;">Parking:<span style="color: black;">6spot</span></h5>
+        </div>
+        <hr>
+        <div><button class="visit-btn">Schedule a visit</button></div>
+      </div>
+      <div class="properties">
+        <img src="../Assests/property-06.jpg" alt="" style="border-radius: 15px;">
+        <div class="amount">
+          <h5
+            style="border: 0px solid rgb(245, 184, 194); background-color:rgb(228, 173, 173); color:black; border-radius: 15px; "
+            class="villa-type">Luxury Villa</h5>
+          <h4 style="color: orangered;" class="num">$2.264.000</h4>
+        </div>
+        <h5 style="color: black;" class="mat mt-3 "><b>18 New Street Miami,OR 97219</b></h5>
+        <div class="details">
+          <h5 style="color: gray;">Bedrooms:<span style="color: black;">8</span></h5>
+          <h5 style="color: gray;">Bathrooms:<span style="color: black;">8</span></h5>
+        </div>
+        <div class="details">
+          <h5 style="color: gray;">Area:<span style="color: black;">545m2</span></h5>
+          <h5 style="color: gray;">Floor:<span style="color: black;">3</span></h5>
+          <h5 style="color: gray;">Parking:<span style="color: black;">6spot</span></h5>
+        </div>
+        <hr>
+        <div><button class="visit-btn">Schedule a visit</button></div>
+      </div>
+    </section>
+  </section>
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="contact-bg" style="background-image: url(../Assests/contact-bg.jpg);background-size: cover;">
+      <p style="color: red; padding-top: 100px;"><b> | CONTACT US</b></p>
+      <h3 class="h-1 fw-bolder text-light text-opacity-90 " id="vdtext">Get In Touch With</h3>
+      <h3 class="h-1 fw-bolder text-light text-opacity-90">Our Agents</h3>
+      <div class="contact-item d-flex flex-wrap">
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18684.436161674337!2d-80.13589854030133!3d25.94531665309018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9add4b4ac788f%3A0xe77469d09480fcdb!2sSunny%20Isles%20Beach!5e0!3m2!1sen!2sin!4v1762784259786!5m2!1sen!2sin"
+            width="600" height="450" style="border:0;border-radius: 10px;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="contact-icon d-flex gap-5">
+            <div class="phone d-flex"
+              style="width: 270px;height: 100px;border: 0px;border-radius: 15px;background-color: whitesmoke;">
+              <div><img src="./Assets/phone-icon.png" alt=""></div>
+              <div class="text-secondary"><b style="color: black;">010-020-0340</b><br>Phone Number</div>
+            </div>
+            <div class="phone d-flex"
+              style="width: 270px;height: 100px;border: 0px;border-radius: 15px;background-color: whitesmoke;">
+              <div><img src="./Assets/email-icon.png" alt=""></div>
+              <div class="text-secondary"><b style="color: black;">info@villa.co</b><br>Business Email</div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-container">
+          <label for="first name" style="margin-top: 25px;">First Name</label><br>
+          <input type="text" placeholder="your name" id="first name"
+            style="width: 380px;border-radius: 25px;background-color: whitesmoke;border: 0px;height: 40px;padding-left: 15px;margin-top: 10px;"><br>
+          <label for="email" style="margin-top: 25px;">Email Address</label><br>
+          <input type="email" placeholder="your E-mail" id="email"
+            style="width: 380px;border-radius: 25px;background-color: whitesmoke;border: 0px;height: 40px;padding-left: 15px;margin-top: 10px;"><br>
+          <label for="subject" style="margin-top: 25px;">Subject</label><br>
+          <input type="text" placeholder="subject" id="subject"
+            style="width: 380px;border-radius: 25px;background-color: whitesmoke;border: 0px;height: 40px;padding-left: 15px;margin-top: 10px;"><br>
+          <label for="comment" style="margin-top: 25px;">Message</label><br>
+          <textarea name="Message" id="comment" placeholder="Your Message" rows="5" cols="50"
+            style="width: 380px;border-radius: 15px;background-color: whitesmoke;border: 0px;padding-left: 15px;padding-top: 10px;margin-top: 10px;"></textarea>
+          <button
+            style="border: 0;background-color: black;color: white;border-radius: 20px;height: 40px;width: 150px;margin-top: 40px;">Send
+            Message</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="footer container-fluid">
+    <div
+      style="width: 100%;height: 100px;background-color: black;color: white;text-align: center;align-content: center;">
+      <p>Copyright &copy; 2048 Villa Agency Co.,Ltd.All rights reserved.Design:Abhinay</p>
+    </div>
+  </section>
+
+
+
+  <script src="./bootstrap.js"></script>
+</body>
+
+</html>
